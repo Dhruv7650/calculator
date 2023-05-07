@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+  <input type="text" id="firstnumber" placeholder="number-1">
+  <input type="text" id="secondnumber" placeholder="number-2">
+  <input type="text" id="operation" placeholder="operation">
+  <button onclick="calculate()">calculate</button>
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      var frstnum = parseInt(document.getElementById('firstnumber').value);
+      var scndnum = parseInt(document.getElementById('secondnumber').value);
+      var operation = document.getElementById('operation').value;
+
+      var result;
+      if (operation === '+') {
+        result = frstnum + scndnum;
+      } else if (operation === '-') {
+        result = frstnum - scndnum;
+      } else if (operation === '*') {
+        result = frstnum * scndnum;
+      } else if (operation === '/') {
+        result = frstnum / scndnum;
+      }
+
+      document.getElementById('result').innerHTML = "The product is: " + result;
+    }
+  </script>
+</body>
+
+</html>
